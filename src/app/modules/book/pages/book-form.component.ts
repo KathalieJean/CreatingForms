@@ -14,12 +14,12 @@ export class BookFormComponent implements OnInit {
  authorsForm: FormArray;
   constructor(private fb: FormBuilder, private route: ActivatedRoute, private bookService: BookService) {
     this.bookForm = this.fb.group({
-      name: new FormControl('KEKW'),
+      name: new FormControl(''),
       authors: this.fb.array([
-        new FormControl('daisy'),
-        new FormControl('syete'),
+        new FormControl(''),
+        new FormControl(''),
       ]),
-      isbn: new FormControl('1234123'),
+      isbn: new FormControl(''),
     });
 
     this.authorsForm = this.bookForm.get('authors') as FormArray;

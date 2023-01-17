@@ -8,7 +8,7 @@ import { BookService } from '../../sevices/book.service';
 })
 
 export class BookListComponent implements OnInit {
-  books: any[] = [];
+  books: any= [];
 
   constructor(private bookService: BookService) {}
 

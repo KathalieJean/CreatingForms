@@ -1,4 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { BookService } from '../../sevices/book.service';
 
 @Component({
   selector: 'app-book-item',
@@ -8,15 +11,20 @@ import { Component, Input } from '@angular/core';
 export class BookItemComponent {
 
   @Input() book: any | undefined;
+  @Input() bookForm: FormGroup | undefined;
+ 
 
-  editBook() {
-    // logic to edit book goes here
-    console.log(`Editing book: ${this.book.name}`);
+  constructor(private router: Router, private bookService: BookService) { }
+
+  editBook(book: any) {
+    this.router.navigate(['book-form/form', book]);
+    
+    // localStorage.setItem('name', JSON.stringify(this.bookForm))    
   }
+  
 
   deleteBook() {
-    // logic to delete book goes here
     console.log(`Deleting book: ${this.book.name}`);
   }
-
 }
+

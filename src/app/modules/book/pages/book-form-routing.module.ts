@@ -11,7 +11,7 @@ const routes: Routes = [
     component: BookListComponent 
   },
   {
-    path: 'book-form/form',
+    path: 'book-form/form/:id',
     component: BookFormComponent
   }
 

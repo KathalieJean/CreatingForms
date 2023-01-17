@@ -24,6 +24,7 @@ export class BookService {
       ISBN: '978-3-16-148410-2'
     }
   ];
+  values : any
 
   constructor() { }
 

@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BookListComponent } from './pages/book-list/book-list.component';
 import { RouterModule, Routes } from '@angular/router';
-import { BookFormComponent } from './pages/book-form.component';
+import { BookListComponent } from '../../book/pages/book-list/book-list.component';
+import { BookFormComponent } from '../../book/pages/book-form.component';
 
 const routes: Routes = [
 
-  {
-    path: '',
-    component: BookListComponent
+  { 
+    path: '', 
+    component: BookListComponent 
   },
   {
     path: 'book-form/form/:id',
     component: BookFormComponent
   }
+
 ];
 
 @NgModule({
@@ -24,4 +25,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class BookRoutingModule { }
+export class BlogFormRoutingModule { }
